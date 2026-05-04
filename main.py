@@ -204,13 +204,13 @@ class MyServer(BaseHTTPRequestHandler):
             return
 
         elif parsed_path.path == "/register":
-            passowrdResponse = {
+            passwordResponse = {
                 "password": "blah"
             } 
             
             self.send_response(200)
             self.end_headers()
-            self.wfile.write(bytes(passowrdResponse, "utf-8"))
+            self.wfile.write(bytes(str(passwordResponse), "utf-8"))
             return
         
 
